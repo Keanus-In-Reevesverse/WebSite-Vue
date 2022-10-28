@@ -38,6 +38,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { RouterLink} from 'vue-router'
+
 
 export default defineComponent({
     name: 'NavBar',
@@ -121,7 +123,7 @@ header {
         }
 
         .link {
-            font-size: 0.87rem;
+            font-size: 16px;
             transition: 0.5s ease all;
             padding-bottom: 4px;
             border-bottom: 1px solid transparent;

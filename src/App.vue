@@ -14,7 +14,7 @@
 
 
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import Navigation from './components/Navigation.vue';
 import Skirting from './components/Skirting.vue';
 
@@ -27,9 +27,5 @@ import Skirting from './components/Skirting.vue';
   position: relative;
   background-color: #f1f1f1;
 }
-.container {
-  padding: 0 20px;
-  max-width: 1140px;
-  margin: 0 auto;
-}
+
 </style>
