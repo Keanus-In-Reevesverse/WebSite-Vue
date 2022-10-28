@@ -88,7 +88,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 header {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(0, 0, 0);
     z-index: 999;
     width: 100%;
     position: fixed;
