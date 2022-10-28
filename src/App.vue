@@ -1,24 +1,22 @@
 <template>
-  <header class="app">
-    <img alt="Vue logo" class="logo" src="./assets/logo.png" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <div class="app">
+    <header>
+      <navigation/>
+    </header>
+    <main>
+      <router-view/>
+    </main>
+    <footer>
+      <skirting/>
+    </footer>
+  </div>
 </template>
 
 
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import Navigation from './components/Navigation.vue';
+import Skirting from './components/Skirting.vue';
 
 
 </script>
