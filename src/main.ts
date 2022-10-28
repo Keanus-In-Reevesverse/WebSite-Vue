@@ -14,7 +14,7 @@ import '@quasar/extras/fontawesome-v6/fontawesome-v6.css'
 // Import Quasar css
 import 'quasar/src/css/index.sass'
 
-import './assets/main.css'
+import '../src/styles/css/main.css'
 
 const app = createApp(App)
 .use(Quasar, {
