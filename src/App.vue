@@ -1,14 +1,14 @@
 <template>
   <div class="app">
-    <header>
+    <v-header>
       <navigation/>
-    </header>
-    <main>
+    </v-header>
+    <v-main>
       <router-view/>
-    </main>
-    <footer>
+    </v-main>
+    <v-footer>
       <skirting/>
-    </footer>
+    </v-footer>
   </div>
 </template>
 
