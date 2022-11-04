@@ -4,6 +4,10 @@
         <section class="carousel-section">
             <carousel />
         </section>
+        <!-- Lojas e Button Fav-->
+        <section class="extra-section">
+
+        </section>
         <!-- Descrição do Game-->
         <section class="desc-section">
             <div class="desc-container">
