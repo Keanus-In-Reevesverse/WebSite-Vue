@@ -3,7 +3,7 @@
     <section class="carousel-section">
       <carousel/>
     </section>
-    <section class="section-card">
+    <section class="card-section">
       <div class="card">
         <!--Card 1-->
         <div class="card__container">
@@ -92,7 +92,7 @@ export default defineComponent({
   width: 100%;
   padding-top: 6.25rem;
 }
-.section-card{
+.card-section{
   margin-left: auto;
   margin-right: auto;
   width: 80%;
