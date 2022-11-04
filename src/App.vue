@@ -25,7 +25,7 @@ import Skirting from './components/Skirting.vue';
 .app {
   min-height: 100vh;
   position: relative;
-  background-color: #f1f1f1;
+  background-image: url("./assets/hero-bg.png");
 }
 
 </style>
