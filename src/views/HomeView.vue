@@ -75,8 +75,6 @@
 import { defineComponent } from 'vue';
 import Carousel from '../components/Carousel.vue';
 
-
-
 export default defineComponent({
   name: 'HomeView',
   components: {
