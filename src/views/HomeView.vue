@@ -54,7 +54,7 @@ export default defineComponent({
   name: 'HomeView',
   components: {
     Carousel,
-    
+
   },
 });
 </script>
@@ -66,14 +66,17 @@ export default defineComponent({
   padding-top: 6.25rem;
 }
 
-.card{
-    display: inline-block;
-    margin-top: 5em;
-    width: 100%;
-    
-}
+.card {
+  display: inline-block;
+  margin-top: 5em;
+  width: 100%;
 
-.card__container{
+  hr{
+    margin: -1.2rem;
+    border-color: rgba(0, 0, 0, 0.37);
+  }
+
+  .card__container {
     display: flex;
     justify-content: space-between;
     margin: 3em 0;
@@ -83,25 +86,24 @@ export default defineComponent({
     background: var(--background-color-dark-white);
     box-shadow: 10px 7px 5px rgba(0, 0, 0, 0.290);
 
-} 
+  }
 
-.card__text{
+  .card__text {
     text-align: center;
     position: relative;
     margin: auto;
+    color: black;
     font-family: var(--cartoon-font);
-}
+  }
 
-
-
-.card__img{
+  .card__img {
     width: 300px;
     height: 300px;
     border-radius: 10px;
     box-shadow: 10px 7px 5px rgba(0, 0, 0, 0.295);
-}
+  }
 
-.buttons__anchor{
+  .buttons__anchor {
     background-color: var(--light-blue);
     padding: 1em 2.2em;
     text-align: center;
@@ -111,10 +113,12 @@ export default defineComponent({
     text-decoration: none;
     border-radius: 6px;
     display: inline-block;
-}
+  }
 
-.buttons__anchor:hover{
+  .buttons__anchor:hover {
     transform: scale(1.20);
     background-color: blue;
+  }
+
 }
 </style>
