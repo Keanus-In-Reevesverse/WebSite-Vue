@@ -1,8 +1,10 @@
 <template>
   <v-main>
+    <!-- Carrosel -->
     <section class="carousel-section">
       <carousel/>
     </section>
+    <!--Cards -->
     <section class="card-section">
       <div class="card">
         <!--Card 1-->
