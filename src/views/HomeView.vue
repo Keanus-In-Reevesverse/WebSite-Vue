@@ -72,8 +72,8 @@ export default defineComponent({
   width: 100%;
 
   hr{
-    margin: -1.2rem;
-    border-color: rgba(0, 0, 0, 0.37);
+    margin: -1rem 0;
+    border-color: black;
   }
 
   .card__container {
@@ -119,6 +119,5 @@ export default defineComponent({
     transform: scale(1.20);
     background-color: blue;
   }
-
 }
 </style>
