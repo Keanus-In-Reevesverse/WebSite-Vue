@@ -40,6 +40,31 @@
           <img class="card__img" src="../assets/img/500x500/03.jpg" alt="">
         </div>
       </div>
+      <hr />
+      <!--Card 4-->
+      <div class="card__container">
+        <div class="card__space-img">
+          <img class="card__img" src="../assets/img/500x500/01.jpg" alt="">
+        </div>
+        <div class="card__text">
+          <h2>Oh yeah, it’s that good. <span class="">See for yourself.</span></h2>
+          <p>Another featurette? Of course...</p>
+          <a href="#" class="buttons__anchor">Saiba mais...</a>
+        </div>
+      </div>
+      <hr />
+      <!--Card 5-->
+      <div class="card__container">
+        <div class="card__text">
+          <h2>And lastly, this one. <span class="">Checkmate.</span></h2>
+          <p>And yes, this is the last block of representative placeholder content. Again, not really intended to be
+            actually read.</p>
+          <a href="#" class="buttons__anchor">Saiba mais...</a>
+        </div>
+        <div class="card__space-img">
+          <img class="card__img" src="../assets/img/500x500/02.jpg" alt="">
+        </div>
+      </div>
     </section>
   </v-main>
 </template>
@@ -68,7 +93,7 @@ export default defineComponent({
 
 .card {
   display: inline-block;
-  margin-top: 5em;
+  margin-top: 1em;
   width: 100%;
 
   hr{
