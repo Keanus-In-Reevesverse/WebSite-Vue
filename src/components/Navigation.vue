@@ -10,25 +10,53 @@
             <div v-show="!mobile" class="desk-navigation">
                 <input type="search" class="header__search" placeholder=" O que procura ?">
                 <div class="header__buttons">
-                    <!-- Login and registration buttons -->
-                    <ul class="buttons-header">
-                        <button type="button" class="buttons-header__login">ENTRAR</button>
-                        <button type="button" class="buttons-header__registration">CADASTRAR</button>
-                    </ul>
+                    <div v-if="!logged">
+                        <!-- Login and registration buttons -->
+                        <ul class="buttons-header">
+                            <button type="button" class="buttons-header__login">ENTRAR</button>
+                            <button type="button" class="buttons-header__registration">CADASTRAR</button>
+                        </ul>
+                    </div>
+
+                    <div v-else>
+                        <div class="q-pa-md">
+                            <q-btn-dropdown label="Profile" dropdown-icon="change_history">
+                                <q-list>
+                                    <q-item clickable v-close-popup @click="">
+                                        <q-item-section>
+                                            <q-item-label>Favoritos</q-item-label>
+                                        </q-item-section>
+                                    </q-item>
+
+                                    <q-item clickable v-close-popup @click="">
+                                        <q-item-section>
+                                            <q-item-label>Sair</q-item-label>
+                                        </q-item-section>
+                                    </q-item>
+                                </q-list>
+                            </q-btn-dropdown>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="icon">
-                <i @click="toggleMobileNav" v-show="mobile" class="far fa-bars" :class="{ 'icon-active': mobileNav }"></i>
+                <i @click="toggleMobileNav" v-show="mobile" class="far fa-bars"
+                    :class="{ 'icon-active': mobileNav }"></i>
             </div>
             <Transition name="mobile-container">
                 <div v-show="mobileNav" class="mobile-navigation">
                     <input type="search" class="header__search" placeholder=" O que procura ?">
                     <div class="header__buttons">
-                    <!-- Login and registration buttons -->
-                        <ul class="buttons-header">
-                            <button type="button" class="buttons-header__login">ENTRAR</button>
-                            <button type="button" class="buttons-header__registration">CADASTRAR</button>
-                        </ul>
+                        <div v-if="!logged">
+                            <!-- Login and registration buttons -->
+                            <ul class="buttons-header">
+                                <button type="button" class="buttons-header__login">ENTRAR</button>
+                                <button type="button" class="buttons-header__registration">CADASTRAR</button>
+                            </ul>
+                        </div>
+                        <div v-else>
+                            <!-- layout sidebar mobile logado -->
+                        </div>
                     </div>
                 </div>
             </Transition>
@@ -38,7 +66,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { RouterLink} from 'vue-router'
+import { RouterLink } from 'vue-router'
 
 
 export default defineComponent({
@@ -46,6 +74,7 @@ export default defineComponent({
     data() {
         return {
             scrollNav: false,
+            logged: false,
             mobile: true,
             mobileNav: false,
             windowWidth: 0,
@@ -174,7 +203,7 @@ header {
             text-align: center;
             justify-content: space-between;
             color: var(--background-color-white);
-            background: url(../assets/Pesquisa.svg) no-repeat ;
+            background: url(../assets/Pesquisa.svg) no-repeat;
             background-position: 1em;
         }
 
@@ -240,21 +269,21 @@ header {
             top: 0;
             left: 0;
 
-            .header__search{
+            .header__search {
                 margin-top: 1.25rem;
                 margin-bottom: 1.25rem;
                 width: 12rem;
                 color: #000;
                 justify-items: center;
-                
+
             }
 
             .header__search::placeholder {
-            color: black;
-            background: url(../assets/Pesquisa.svg) no-repeat ;
-            
-        }
-           
+                color: black;
+                background: url(../assets/Pesquisa.svg) no-repeat;
+
+            }
+
         }
 
         .mobile-container-enter-active,
