@@ -8,5 +8,5 @@
 </script>
 
 <style lang="scss">
-
+@import url('../../styles/css/modalBase.css');
 </style>
