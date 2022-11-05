@@ -17,7 +17,6 @@
                             <button type="button" class="buttons-header__registration">CADASTRAR</button>
                         </ul>
                     </div>
-
                     <div v-else>
                         <div class="q-pa-md">
                             <q-btn-dropdown label="Profile" dropdown-icon="change_history">
