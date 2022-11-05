@@ -13,8 +13,16 @@
                     <div v-if="!logged">
                         <!-- Login and registration buttons -->
                         <ul class="buttons-header">
-                            <button type="button" class="buttons-header__login">ENTRAR</button>
-                            <button type="button" class="buttons-header__registration">CADASTRAR</button>
+                            <button @click="showLogin = true" type="button"
+                                class="buttons-header__login">ENTRAR</button>
+                            <q-dialog v-model="showLogin">
+                               <Login/>
+                            </q-dialog>
+                            <button @click="showRegister = true" type="button"
+                                class="buttons-header__registration">CADASTRAR</button>
+                            <q-dialog v-model="showRegister">
+                               <Register/>
+                            </q-dialog>
                         </ul>
                     </div>
                     <div v-else>
@@ -49,8 +57,14 @@
                         <div v-if="!logged">
                             <!-- Login and registration buttons -->
                             <ul class="buttons-header">
-                                <button type="button" class="buttons-header__login">ENTRAR</button>
-                                <button type="button" class="buttons-header__registration">CADASTRAR</button>
+                                <button @click="showLogin = true" type="button" class="buttons-header__login">ENTRAR</button>
+                                <q-dialog v-model="showLogin">
+                                    <Login/>
+                                </q-dialog>
+                                <button @click="showRegister = true" type="button" class="buttons-header__registration">CADASTRAR</button>
+                                <q-dialog v-model="showRegister">
+                                    <Register/>
+                                </q-dialog>
                             </ul>
                         </div>
                         <div v-else>
@@ -64,12 +78,24 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 import { RouterLink } from 'vue-router'
 
+import Register from './modal/ModalCadastro.vue'
+import Login from './modal/ModalLogin.vue'
 
 export default defineComponent({
     name: 'NavBar',
+    components: {
+        Register,
+        Login,
+    },
+    setup() {
+        return {
+            showLogin: ref(false),
+            showRegister: ref(false),
+        }
+    },
     data() {
         return {
             scrollNav: false,
