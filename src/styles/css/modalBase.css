@@ -1,0 +1,60 @@
+.modal {
+    width: 19rem;
+    height: 18rem;
+    display: grid;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    background: white;
+    border-radius: 2rem;
+    border: solid;
+}
+
+h1{
+    text-align: center;
+}
+button{
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    border-radius: 8px;
+    background-color: gray;
+    cursor: pointer;
+    margin-left: 5.2rem;
+}
+
+.inputemail{
+    margin-bottom: 2rem;
+}
+
+.inputpws{
+    margin-bottom: 1rem;
+}
+
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.forget {
+    margin-top: 0.5rem;
+    margin-left: 3.8rem;
+    color: blue;
+    text-decoration: none;
+}
+
+.forget:visited {
+    color: blue;
+}
+
+.fechar {
+    position: absolute;
+    width: 30px;
+    right: -8px;
+    top: -15px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 5px;
+    background: #ff4545;
+    border-radius: 50%;
+    font-size: 16px;
+    color: #8d0000;
+}
