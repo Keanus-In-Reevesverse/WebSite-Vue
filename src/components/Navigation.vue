@@ -2,7 +2,6 @@
     <header :class="{ 'scrolled-nav': scrollNav }">
         <nav>
             <div class="branding">
-                <img src="../assets/logo.png" alt="Logo">
                 <li>
                     <router-link class="link" :to="{ name: 'home' }">BuscaJogos+</router-link>
                 </li>
