@@ -1,14 +1,31 @@
 <template>
     <v-main>
-
+      <section class="card-section">
+        <div class="card">
+          <div class="card__container">
+            <div class="card__space-img">
+              <img class="card__img" src="../assets/img/500x500/02.jpg" alt="">
+            </div>
+            <div class="card__text">
+              <h2>Titulo Do Game. </h2>
+              <a href="#" class="buttons__anchor">Ir para a pagina do jogo...</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </v-main>
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue';
 
+
+export default defineComponent({
+  name: 'LisFavView',
+});
 </script>
 
-<script lang="scss">
+<style lang="scss" scoped>
 .card-section{
   margin-left: auto;
   margin-right: auto;
@@ -19,7 +36,7 @@
 .card {
   display: inline-block;
   justify-items: center;
-  margin-top: 1em;
+  margin-top: 5.5em;
   width: 100%;
 
   hr{
@@ -48,11 +65,7 @@
 
     h2{
       font-weight: 700;
-      font-size: 18px;
-
-      span{
-        color: gray;
-      }
+      font-size: 28px;
     }
 
   }
@@ -78,4 +91,4 @@
     background-color: blue;
   }
 }
-</script>
+</style>
